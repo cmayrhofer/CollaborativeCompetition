@@ -5,3 +5,5 @@
 # Collaborative Competition
 
 [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis)
+
+![Trained Agent][image1]
