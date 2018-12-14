@@ -28,3 +28,18 @@ As the above GIF-animation adumbrates, each agent can move its racket into two d
 
 The environment is to be considered solved if the average score over 100 consecutive episodes is greater equal 0.5. The score for each episode is obtained by taking the maximum of the two scores from the two agents. 
 
+## Getting Started
+
+To run the code provided in this repository, you must have python 3.6 or higher installed. In addition, you will need to have the packages: [numpy](http://www.numpy.org/), [matplotlib](https://matplotlib.org/), [torch](https://pytorch.org/) (including its dependencies) installed. Then follow the next three steps. Afterwards you should be able to run the `Navigation.ipynb` without any dependencies errrors.
+
+1. Follow the steps in [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) to install the Unity ML-Agents Toolkit.
+2. Download the single reacher environment from one of the links below. Select the environment which matches your operating system:
+     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
+    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
+    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
+    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
+    
+    
+3. Place the file in the folder where you also placed the `maddpg.py` file, the `ddpg_agent.py` file, the `model.py` file, and the `Tennis.ipynb` notebook and unzip (or decompress) the file.
+
+If you are still having issues after following this steps regarding the dependencies then please check out the more throughly configuration [here](https://github.com/udacity/deep-reinforcement-learning#dependencies).
