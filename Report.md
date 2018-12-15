@@ -2,13 +2,13 @@
 -------------
 
 In the following, we provide a detailed write up of the solution of the _collaborative competition_.
-We have implemented an maddpg, i.e. multi agent deep deterministic policy gradient, similar to the one outlined and implemented in [Lowe, Wu, et. al.](https://arxiv.org/abs/1706.02275).
-The idea behind MADDPG is to leverage the  successful ideas behind DDPG [Lillicrap, Hunt, et. al.](http://arxiv.org/abs/1509.02971), which themselves build up on deep q-learning networks DQN [Mnih, Kavukcuoglu, Silver, et. al.](http://www.nature.com/articles/nature14236), to problems with still continuous action spaces but have now more than one agent. 
+We have implemented an maddpg, i.e. multi agent deep deterministic policy gradient, similar to the one outlined and implemented in [Lowe, Wu, et. al.](https://arxiv.org/abs/1706.02275)
+The idea behind MADDPG is to leverage the  successful ideas behind DDPG [Lillicrap, Hunt, et. al.](http://arxiv.org/abs/1509.02971), which itself builds up on deep q-learning networks DQN [Mnih, Kavukcuoglu, Silver, et. al.](http://www.nature.com/articles/nature14236), to problems with still continuous action spaces but now have more than one agent. 
 
 As the authors of the MADDPG paper show in their appendix, MADDPGs still use the key features of the DDPG approach:
 * memory replay: randomization over the data to remove correlations in the observation sequences and to be data efficient;
 * target networks: the networks are trained with target networks to give a consistent target during temporal learning (to avoid dangerous correlations); The updates of the target networks are done softly, i.e. the weights of the actual actor and critic networks are slowly propagated to the targets.
-* To circumvent the problem of optimization for DQN in combination with continuous action spaces, an additional neural network is introduced, i.e. the actor, which learns to approximate optimal action directly. The Q-network is still of importance because it serves as a guidance, i.e. a critic, for the updates of the policy (actor) network.
+* and to circumvent the problem of optimization for DQN in combination with continuous action spaces, an additional neural network is introduced, i.e. the actor, which learns to approximate optimal action directly. The Q-network is still of importance because it serves as a guidance, i.e. a critic, for the updates of the policy (actor) network.
 
 
 Next, we describe in detail how the learning is done and implemented
