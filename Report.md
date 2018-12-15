@@ -134,5 +134,12 @@ The neural network which learns to approximate the action-value function consist
 
 ## Ideas for Future Work
 
+* Improve the learning performance of the agent by implementing a [prioritized experience replay](https://arxiv.org/abs/1511.05952).
+
+* Play around with the parameters and the network architectures to see whether I could reach the average score of 2.5 which is the goal as defined by Unity. 
+
+* Go beyond the Tennis environment and try to solve the Soccer environment where we even have four agents interacting with each other.
+
+* Implement the proximal policy optimization algorithms, which was also used by openAI for dota2, and see whether it would be superior in comparison to the maddpg approach that we took here.
 
 
