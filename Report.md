@@ -98,6 +98,38 @@ In this graphic we see the learning performance of our algorithm. We note that a
 
 ## The Architecture of the Actor and Critic Network
 
+The neural network which learns to approximate the optimal policy function consists of three linear fully connected layers. Between every two layers we use rectifier as non-linear activation functions. After the first fully connected layer we add a batch normalization. And in the very end a tanh is used to constrain the action to the action space which goes from $-1$ to $1$. In more detail, the network looks as follows:
+
+* The first fully connected layer has 24 input-channels, for the 24 dimensional state vector, and 32 output channels.
+
+* First ReLU layer.
+
+* Batch normalization
+
+* The hidden fully connected layer with 32 input and 32 output channels, respectively.
+
+* Second ReLU layer.
+
+* Output layer with 32 input and 2 output channels, where we act with a tanh on each output channel.
+
+
+The neural network which learns to approximate the action-value function consists of four linear fully connected layers. Between every two layers we use rectifier as non-linear activation functions. After the first fully connected layer we add a batch normalization and concatenate the output of the actor DNN. In more detail, the network looks as follows:
+
+* The first fully connected layer has 24 input-channels, for the 24 dimensional state vector, and 32 output channels.
+
+* First ReLU layer.
+
+* Batch normalization
+
+* The hidden fully connected layer with 32 input and 32 output channels, respectively.
+
+* Second ReLU layer.
+
+* The hidden fully connected layer with 32 input and 32 output channels, respectively.
+
+* Third ReLU layer.
+
+* Output layer with 32 input and 1 output channel.
 
 
 ## Ideas for Future Work
